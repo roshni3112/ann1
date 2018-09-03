@@ -1,5 +1,5 @@
 ---
  - hosts: localhost.localdomain
- user: root
- vars:
-  motd_warning: 'this is test execution'
+   user: root
+   vars:
+    motd_warning: 'this is test execution'
