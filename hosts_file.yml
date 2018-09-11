@@ -1,4 +1,4 @@
 ---
 - name: Install nginx
-  hosts: host.name.ip
+  hosts: 10.0.1.182
   become: true
