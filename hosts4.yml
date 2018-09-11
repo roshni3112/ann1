@@ -2,8 +2,8 @@
 - 
   become: true
   gather_facts: false
-  hosts: 10.0.1.164
-  name: Web01
+  hosts: testServer
+  name: testServer
   pre_tasks: 
     - 
       changed_when: false
