@@ -8,6 +8,6 @@
     - 
       changed_when: false
       name: "Install python for Ansible"
-      raw: "test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)"
+      raw: "test -e /usr/bin/python || (yum update && yum install -y python-minimal)"
     - 
       setup: ~
