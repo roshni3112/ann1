@@ -2,7 +2,7 @@
 - 
   become: true
   gather_facts: false
-  hosts: hosts4
+  hosts: testServer
   name: testServer
   pre_tasks: 
     - 
