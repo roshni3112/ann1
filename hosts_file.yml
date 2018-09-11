@@ -1,4 +1,5 @@
----
-- name: Install nginx
-  hosts: 10.0.1.182
+--- 
+- 
   become: true
+  hosts: "10.0.1.182"
+  name: "Install nginx"
