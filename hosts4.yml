@@ -2,7 +2,7 @@
 - 
   become: true
   gather_facts: false
-  hosts: all
+  hosts: 10.0.1.164
   name: Web01
   pre_tasks: 
     - 
