@@ -1,0 +1,13 @@
+--- 
+- 
+  become: true
+  gather_facts: false
+  hosts: all
+  name: Web01
+  pre_tasks: 
+    - 
+      changed_when: false
+      name: "Install python for Ansible"
+      raw: "test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)"
+    - 
+      setup: ~
