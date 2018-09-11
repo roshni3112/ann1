@@ -1,0 +1,40 @@
+--- 
+- 
+  handlers: 
+    - 
+      name: "restart sshd"
+      service: "name=sshd state=restarted"
+  hosts: all
+  tasks: 
+    - 
+      name: "Change root password"
+      user: "name=root password={{ root_password }}"
+    - 
+      name: "Add user remote"
+      user: "name=remote password={{ remote_password }}"
+    - 
+      authorized_key: "user=remote key=\"{{ lookup('file', \"../files/workstation.pub\") }}\""
+      name: "Add SSH public key to user remote"
+    - 
+      lineinfile: "dest=/etc/sudoers regexp='^remote ALL' line='remote ALL=(ALL) NOPASSWD: ALL' state=present"
+      name: "Add remote user to sudoers"
+    - 
+      lineinfile: "dest=/etc/ssh/sshd_config regexp=\"^PermitRootLogin\" line=\"PermitRootLogin no\" state=present"
+      name: "Disallow root SSH access"
+      notify: 
+        - "restart sshd"
+    - 
+      lineinfile: "dest=/etc/ssh/sshd_config regexp=\"^PasswordAuthentication\" line=\"PasswordAuthentication no\" state=present"
+      name: "Disallow SSH password authentication"
+      notify: 
+        - "restart sshd"
+    - 
+      lineinfile: "dest=/etc/ssh/sshd_config regexp=\"^GSSAPIAuthentication\" line=\"GSSAPIAuthentication no\" state=present"
+      name: "Disallow SSH GSS API authentication"
+      notify: 
+        - "restart sshd"
+  vars: 
+    - 
+      root_password: HASHED_PASSWORD
+    - 
+      remote_password: HASHED_PASSWORD
