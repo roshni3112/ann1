@@ -1,0 +1,8 @@
+--- 
+- 
+  hosts: targetserver
+  tasks: 
+    - 
+      copy: 
+        dest: /root/temp
+        src: /etc/opt/myfile
