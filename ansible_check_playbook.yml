@@ -1,0 +1,4 @@
+--- 
+- 
+  hosts: ansibleclient01.local
+  name: "This is a hello-world example"
