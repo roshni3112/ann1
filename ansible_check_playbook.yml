@@ -1,4 +1,4 @@
 --- 
 - 
-  hosts: testServer
+  hosts: all
   name: "This is a hello-world example"
