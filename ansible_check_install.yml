@@ -5,4 +5,4 @@
     - 
       name: "Installing NumPy python library using Ansible pip module"
       pip: 
-        name: NumPy
+        name: Bottle
