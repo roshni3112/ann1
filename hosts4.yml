@@ -2,7 +2,7 @@
 - 
   become: true
   gather_facts: false
-  hosts: testServer
+  hosts: 10.0.1.60
   name: testServer
   pre_tasks: 
     - 
