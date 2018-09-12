@@ -4,5 +4,5 @@
   tasks: 
     - 
       copy: 
-        dest: Desktop/backup
+        dest: /root/Desktop/backup
         src: /etc/opt/myfile/file1
