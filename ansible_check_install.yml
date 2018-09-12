@@ -2,13 +2,7 @@
 - 
   hosts: all
   sudo: true
-  tasks: 
-    - 
-      yum: "name={{ item }} state=latest"
-      name: "Install Package"
-      with_items: packages
-  vars: 
-    packages: 
-      - vim
-      - git
-      - curl
+  tasks: ~
+- 
+  pip: 
+    name: bottle
