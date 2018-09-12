@@ -4,7 +4,7 @@
   sudo: true
   tasks: 
     - 
-      apt: "name={{ item }} state=latest"
+      yum: "name={{ item }} state=latest"
       name: "Install Package"
       with_items: packages
   vars: 
