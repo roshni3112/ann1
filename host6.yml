@@ -1,6 +1,6 @@
 --- 
 - 
-  hosts: targetserver
+  hosts: testServer
   tasks: 
     - 
       copy: 
