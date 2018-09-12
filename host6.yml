@@ -4,5 +4,5 @@
   tasks: 
     - 
       copy: 
-        dest: /root/temp
-        src: /etc/opt/myfile
+        dest: /backup/ansible_check/etc/profile
+        src: /etc/opt/myfile/file1
