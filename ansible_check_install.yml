@@ -3,6 +3,6 @@
   hosts: all
   tasks: 
     - 
-      name: "Installing NumPy python library using Ansible pip module"
+      name: "Installing matpplotlib python library using Ansible pip module"
       pip: 
-        name: Bottle
+        name: matplotlib
