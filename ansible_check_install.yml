@@ -1,6 +1,6 @@
 --- 
 - 
-  hosts: 10.0.1.60
+  hosts: 10.0.1.215
   tasks: 
     - 
       name: "Installing matpplotlib python library using Ansible pip module"
