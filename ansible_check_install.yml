@@ -1,6 +1,6 @@
 --- 
 - 
-  hosts: "10.0.1.182"
+  hosts: "all"
   tasks: 
     - 
       name: matplotlib
