@@ -2,3 +2,6 @@
 - 
   hosts: "10.0.1.248"
   name: "This is a hello-world example"
+-
+  hosts: "10.0.1.182"
+  name: "This is a hello-world example"
