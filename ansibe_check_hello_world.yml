@@ -1,0 +1,4 @@
+--- 
+- 
+  hosts: "10.0.1.248"
+  name: "This is a hello-world example"
