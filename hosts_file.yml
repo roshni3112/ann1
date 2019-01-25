@@ -2,4 +2,4 @@
 - 
   become: true
   hosts: "10.0.4.88"
-  name: "Install nginx"
+  name: "Install Caddy"
