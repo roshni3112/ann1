@@ -1,5 +1,5 @@
 --- 
 - 
   become: true
-  hosts: "10.0.1.182"
+  hosts: "10.0.4.88"
   name: "Install nginx"
